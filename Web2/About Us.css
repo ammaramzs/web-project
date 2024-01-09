@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Reem Kufi', sans-serif;
+    background-color: rgba(0,106 ,106 ,0.304 );
+
+}
+
+h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: beige;
+}
+
+h3{
+    font-size:2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgb(255, 94, 0);
+
+}
+
+p{
+    font-size: 1.6rem;
+    color: crimson;
+    line-height: 2;
+}
+
+/*nav section */
+.nav-container{
+    background-color: #05f4fc;
+    
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1366px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    font-size: 1.7rem;
+}
+  
+nav lu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex: 1;
+}
+nav lu li a{
+    color: rgb(255, 0, 255);
+    display: block;
+    text-decoration: none;
+}
+nav lu li a:hover{
+    color: rgb(255, 8, 0);
+}
+
+/*About Us section*/
+
+
+
+
+    
+    

@@ -1,0 +1,48 @@
+
+
+/*About Us section*/
+body{
+    font-family: 'Reem Kufi', sans-serif;
+    background-color: rgba(0,106 ,106 ,0.304 );
+    
+   
+} 
+
+/*nav section */
+.nav-container{
+    background-color: #05f4fc;
+    margin-top: -9px;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1366px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    font-size: 1.1rem;
+    
+}
+  
+nav lu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex: 1;
+}
+nav lu li a{
+    color: rgb(255, 0, 255);
+    display: block;
+    text-decoration: none;
+}
+nav lu li a:hover{
+    color: rgb(255, 8, 0);
+}
+
+
+
+
+    

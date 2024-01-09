@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.postimg.cc/vBCQ6gpp/removebg-preview.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form page</title>
+</head>
+<body>  
+    <div class="nav-container">
+        <nav>
+            <img src="https://i.postimg.cc/NjgSjXm6/removebg-preview-1-1-1.png" >
+            <lu>
+                <li><a href="../main page.html ">Home</a></li>
+                <li><a href="Contact-us.html">Contact Us</a></li>
+                <li><a href="../review page/index.html ">Reviews</a></li>
+                <li><a href="../SiteMap.html">SiteMap </a></li>
+                <li><a href="../About Us.html ">About Us </a></li>
+                <li><a href="Products-Services.html" >Services</a></li>
+
+
+            </lu>
+        </nav>
+    </div>
+    
+    <center>           
+        <div class="border">
+            <label for="formGroupExampleInput" class="form-label">Height (in meters)</label><br>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            <div id="heightValidation" class="validation-message" style="color: red;"></div><br>
+        
+            <label for="formGroupExampleInput2" class="form-label">Weight (in kilograms)</label><br>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            <div id="weightValidation" class="validation-message" style="color: red;"></div><br><br>
+              
+            <button type="button" class="btn" onclick="calculateBMI()">Calculate BMI</button><br><br>
+            <textarea id="resultTextarea" rows="7" cols="35" readonly></textarea> 
+        </div>
+    
+        <script>
+            function calculateBMI() {
+                // Clear previous validation messages
+                document.getElementById("heightValidation").innerText = "";
+                document.getElementById("weightValidation").innerText = "";
+    
+                // Get height and weight from input fields
+                var heightInput = document.getElementById("formGroupExampleInput").value;
+                var weightInput = document.getElementById("formGroupExampleInput2").value;
+    
+                // Check if height and weight are valid numbers
+                var height = parseFloat(heightInput);
+                var weight = parseFloat(weightInput);
+    
+                if (isNaN(height)) {
+                    displayValidationMessage("Height must be a valid number.", "height");
+                } else if (height <= 0 ) {
+                    displayValidationMessage("Height must be greater than 0.", "height");
+                }
+    
+                if (isNaN(weight)) {
+                    displayValidationMessage("Weight must be a valid number.", "weight");
+                } else if (weight <= 0) {
+                    displayValidationMessage("Weight must be greater than zero.", "weight");
+                }
+    
+                // If there are any validation messages, return without calculating BMI
+                if (document.getElementById("heightValidation").innerText !== "" || document.getElementById("weightValidation").innerText !== "") {
+                    return;
+                }
+    
+                // Calculate BMI
+                var bmi = weight / (height * height);
+                var interpretation = getBMICategory(bmi);
+    
+                // Display the result in the textarea
+                document.getElementById("resultTextarea").value = "Height: " + height + " meters\nWeight: " + weight + " kilograms\nBMI: " + bmi.toFixed(2) + "\nCategory: " + interpretation;
+            }
+    
+            function getBMICategory(bmi) {
+                if (bmi < 18.5) {
+                    return "Underweight";
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    return "Normal weight";
+                } else if (bmi >= 25 && bmi < 30) {
+                    return "Overweight";
+                } else {
+                    return "Obese";
+                }
+            }
+    
+            function displayValidationMessage(message, type) {
+                // Display validation message at the bottom of the corresponding input field
+                if (type === "height") {
+                    document.getElementById("heightValidation").innerText = message;
+                } else if (type === "weight") {
+                    document.getElementById("weightValidation").innerText = message;
+                }
+            }
+        </script>
+            </center>
+</body>
+</html>

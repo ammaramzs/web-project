@@ -1,0 +1,91 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Reem Kufi', sans-serif;
+    background-color: rgba(0,106 ,106 ,0.304 );
+
+}
+
+h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: beige;
+}
+
+h3{
+    font-size:2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgb(255, 94, 0);
+
+}
+
+p{
+    font-size: 1.6rem;
+    color: crimson;
+    line-height: 2;
+}
+
+/*nav section */
+.nav-container{
+    background-color: #05f4fc;
+    color: rgb(243, 116, 12);
+
+}
+nav{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1366px;
+    justify-content: space-between;
+
+    display: flex;
+ 
+    align-items: center;
+    min-height: 10vh;
+    font-size: 1.7rem;
+}
+nav .logo{
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: bold;
+    color: rgb(43, 184, 55);
+    flex: 2;
+    margin-bottom: 0;
+}    
+nav lu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+    flex: 1;
+}
+nav lu li a{
+    color: rgb(255, 0, 255);
+    display: block;
+    
+    text-decoration: none;
+}
+nav lu li a:hover{
+    color: rgb(255, 8, 0);
+}
+/*footer section*/
+footer{
+    background: rgb(70, 224, 116);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+footer p {
+    color: rgba(44, 28, 184, 0.8);
+}
+    

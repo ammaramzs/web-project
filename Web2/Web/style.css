@@ -1,0 +1,63 @@
+body{
+    background-color: rgba(0,106 ,106 ,0.304 );
+
+    background-size: 1330px 2500px;
+    font-family: 'Reem Kufi', sans-serif;
+
+}
+/*nav section */
+.nav-container{
+    background-color: #05f4fc;
+    color: rgb(243, 116, 12);
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1366px;
+    justify-content: space-between;
+
+    display: flex;
+ 
+    align-items: center;
+    min-height: 10vh;
+    font-size: 1.1rem;
+}
+nav .logo{
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: bold;
+    color: rgb(43, 184, 55);
+    flex: 2;
+    margin-bottom: 0;
+}    
+nav lu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+    flex: 1;
+}
+nav lu li a{
+    color: rgb(255, 0, 255);
+    display: block;
+    
+    text-decoration: none;
+}
+nav lu li a:hover{
+    color: rgb(255, 8, 0);
+}
+
+
+.price {
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+}
+.container{
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
